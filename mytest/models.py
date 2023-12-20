@@ -1,5 +1,5 @@
 from django.db import models
-
+#資料庫
 class Mood(models.Model):
     status = models.CharField(max_length=10, null=False)
 
