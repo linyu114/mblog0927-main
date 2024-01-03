@@ -1,6 +1,5 @@
 """
 URL configuration for mblog0927 project.
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
 Examples:
@@ -14,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 from mysite import views as mv
@@ -32,5 +32,11 @@ urlpatterns = [
     path('post/new', mv.new_post, name="post-new"),
     path('test/', testv.index, name="test-new"),
     path('test/delpost/<int:pid>/', testv.delpost),
-    path('test/contact', testv.contact)
+    path('test/contact', testv.contact),
+    path('post2db/', testv.post2db),
+    path('register/', testv.register),
+    path('login/', testv.login),
+    path('login/', testv.login, name='login'),
+    path('profile/', testv.profile),
+
 ]
